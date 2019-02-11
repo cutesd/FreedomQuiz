@@ -138,14 +138,14 @@ $(document).ready(function () {
 
 				<header class="header">
 					<div class="inline-bg"><img src="assets/images/HMC_logo-inline.png" alt="Helen MacMillan"></div>
-					<h1>Which of the 8 Invisible Chains have you Stuck?</h1>
+					<h1>Which of the 8 Invisible Chains have you feeling stuck?</h1>
 				</header>
 				
                 <div class="top">
                     <div>
 		  				<h5 class="text-muted question-num">Question #${qN + 1}</h5>
 		  				<h3 class="question">${question.question}</h3>
-                          <p class="description">Choose the number that best indicates where you feel in relation <br/>to this question.</p>
+                          <p class="description">Choose the number that best indicates where you feel in relation to this question.</p>
                     </div>
 						
 		  				<div class="btn-toolbar mt-4 mb-3" id="btnBar${qN}" role="toolbar" aria-label="number toolbar">
