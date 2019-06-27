@@ -23,15 +23,22 @@ body{
   background-color: #f2e6ce;
 }
 
-button{
+.btn{
 	background-color: #17a2b8;
 	color:#FFF;
 	transition: 0.5s;
 }
 
+.btn-danger {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
 button:hover{
   background-color: #E7C45D!important;
   border-color: #E7C45D!important;
+  color: #FFF!important;
 }
 
 .selected{

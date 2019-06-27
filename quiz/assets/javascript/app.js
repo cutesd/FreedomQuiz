@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     const myQuestions = [
         {
             question: "I live in total abundance, where I literally \nlack for nothing.",
@@ -212,17 +211,18 @@ $(document).ready(function () {
 
         $('#submit-lead').on("click", function (e) {
             var form = $("#zcampaignOptinForm")[0];
-            console.log(form);
+            console.log(form.checkValidity());
+            console.log(validateEmail());
            //
-            if (form.checkValidity() === false || !validateEmail()) {
-                event.preventDefault();
-                event.stopPropagation();
+            if (!form.checkValidity() || !validateEmail()) {
+                e.preventDefault();
+                e.stopPropagation();
             } else {
                 $("#zcampaignOptinForm").submit();
                 //window.open('http://chainsquiz.com/quiz/results.html?n=' + getResults(), '_blank');
                 // window.open("http://helenmacmillan.com/chains-quiz-thank-you/", '_blank');
             }
-            form.classList.add('was-validated');
+            $(form).addClass('was-validated');
         });
         //
         $('#lead-back-btn').on("click", function (e) {

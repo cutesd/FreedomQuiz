@@ -210,6 +210,9 @@ li {
   text-align: left;
 }
 
+.invalid-feedback {
+  font-size: 65%;
+}
 /* ===========  RESULTS CARD ===================*/
 
 .card {
