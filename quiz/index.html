@@ -28,7 +28,7 @@
 	<img class="logo d-none d-md-block" src="assets/images/HMC_logo_sm.png">
 
 	<main>
-		<div class="quiz-container d-none" id='quiz-container'>
+		<div class="quiz-container" id='quiz-container'>
 
 
 			<!--======================================= SLIDE =======================================-->
@@ -82,7 +82,7 @@
 		</div>
 		<!-- ./quiz-container -->
 
-		<div class="lead-gen">
+		<div class="lead-gen d-none">
 
 			<header class="header">
 				<div class="inline-bg">
@@ -148,7 +148,7 @@
 														<!-- ***  HIDDEN FIELDS *** -->
 														<div>
 															<div name="fieldsdivSf" class="zcsffieldsdiv">
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Scarcity&nbsp;
 																		</div>
@@ -160,7 +160,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Scarcitytext&nbsp;
 																		</div>
@@ -176,7 +176,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">MisTrust&nbsp;
 																		</div>
@@ -192,7 +192,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">MisTrustText&nbsp;
 																		</div>
@@ -208,7 +208,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Invisibility&nbsp;
 																		</div>
@@ -224,7 +224,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			InvisibilityText&nbsp;</div>
@@ -240,7 +240,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Control&nbsp;
 																		</div>
@@ -256,7 +256,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">ControlText&nbsp;
 																		</div>
@@ -272,7 +272,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Repression&nbsp;
 																		</div>
@@ -288,7 +288,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			RepressionText&nbsp;</div>
@@ -304,7 +304,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Blindness&nbsp;
 																		</div>
@@ -320,7 +320,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			BlindnessText&nbsp;</div>
@@ -336,7 +336,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			Disconnection&nbsp;</div>
@@ -352,7 +352,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			DisconnectionText&nbsp;</div>
@@ -368,7 +368,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">Undervalue&nbsp;
 																		</div>
@@ -384,7 +384,7 @@
 																	</div>
 																	<div></div>
 																</div>
-																<div style="display:none" ishidden="true">
+																<div class="d-none" ishidden="true">
 																	<div>
 																		<div name="SIGNUP_FORM_LABEL">
 																			UndervalueText0&nbsp;</div>
@@ -423,7 +423,7 @@
 																		</label>
 																		<div>
 																			<!-- check to mark emailid field as type email, and other mandatory fields as type required -->
-																			<input class="form-control" name="CONTACT_EMAIL"
+																			<input class="form-control" id="zoho_CONTACT_EMAIL" name="CONTACT_EMAIL"
 																				changeitem="SIGNUP_FORM_FIELD"
 																				type="email" placeholder="example@email.com"
 																			    value="" required>
@@ -672,7 +672,7 @@
 	<!-- <script type="text/javascript"
 		src="https://zg121.infusionsoft.com/app/timezone/timezoneInputJs?xid=b3987557376c5ce61a4c27cb597aedd4"></script> -->
 
-	<!-- <script type="text/javascript" src="assets/javascript/app.js?n=017"></script> -->
+	<script type="text/javascript" src="assets/javascript/app.js?n=018"></script>
 
 
 

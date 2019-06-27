@@ -118,7 +118,7 @@ $(document).ready(function () {
             result: {
                 low: "You feel like a lowly person, perhaps a servant to life, and unworthy of good things. This is a hard burden to bear. But you don’t have to stay in this belief structure. With the right support, you can SHIFT your perspective and embrace your self-worth.",
                 medium: "With this score, you are learning to value yourself, love yourself, and receive good things in life. With some focused coaching support, you can step into a receiving flow that makes everything even easier.",
-                high: "Congratulations on building  your self-confidence to this level. You KNOW you are worthy - and you attract GREAT things, opportunities, and wealth because you do."
+                high: "Congratulations on building your self-confidence to this level. You KNOW you are worthy - and you attract GREAT things, opportunities, and wealth because you do."
             }
         }
 
@@ -190,17 +190,19 @@ $(document).ready(function () {
 
 
         // Lead Form
-        $('#inf_field_Email').on('change', function(){
-            $('#inf_field_Email').removeClass('is-invalid');
+        $('#zoho_CONTACT_EMAIL').on('change', function(){
+            console.log("email changing")
+            $('#zoho_CONTACT_EMAIL').removeClass('is-invalid');
             $('#email-feedback').removeClass('is-invalid');
         });
 
         const validateEmail = () => {
-            var email = $('#inf_field_Email').val();
+            console.log("validate email")
+            var email = $('#zoho_CONTACT_EMAIL').val();
             if (email === undefined || email.length < 1) return false;
             //
             if (email.indexOf('@') < 0 || email.indexOf('.') < 0 || email.split('.')[1].length < 1) {
-                $('#inf_field_Email').addClass('is-invalid');
+                $('#zoho_CONTACT_EMAIL').addClass('is-invalid');
                 $('#email-feedback').addClass('is-invalid');
                 return false;
             }
@@ -209,14 +211,15 @@ $(document).ready(function () {
         }
 
         $('#submit-lead').on("click", function (e) {
-            var form = $("#inf_form_b3987557376c5ce61a4c27cb597aedd4")[0];
+            var form = $("#zcampaignOptinForm")[0];
+            console.log(form);
            //
             if (form.checkValidity() === false || !validateEmail()) {
                 event.preventDefault();
                 event.stopPropagation();
             } else {
-                $("#inf_form_b3987557376c5ce61a4c27cb597aedd4").submit();
-                window.open('http://chainsquiz.com/quiz/results.html?n=' + getResults(), '_blank');
+                $("#zcampaignOptinForm").submit();
+                //window.open('http://chainsquiz.com/quiz/results.html?n=' + getResults(), '_blank');
                 // window.open("http://helenmacmillan.com/chains-quiz-thank-you/", '_blank');
             }
             form.classList.add('was-validated');
@@ -235,18 +238,19 @@ $(document).ready(function () {
         quizContainer.classList.add("d-none");
         document.getElementsByClassName('lead-gen')[0].classList.remove('d-none');
         //
-        var queryStr = getResults();
+        const queryStr = getResults();
       
         const _arr = queryStr.split('-');
+        let j = 1;
         
-        for (var i = 0; i < _arr.length; i++) {
+        for (let i = 0; i < _arr.length; i++) {
             const score = parseResults(_arr[i]);
-            const n = (i === 4 || i === 7) ? '0' : '';
-            $(`input[name='inf_custom_${myResults[i].chain}']`).val(score);
-            $(`input[name='inf_custom_${myResults[i].chain}Text${n}']`).val(myResults[i].result[score]);
+            $(`input[name='CONTACT_CF${j++}']`).val(score);
+            j = (j === 16) ? 31 : j;
+            $(`input[name='CONTACT_CF${j++}']`).val(myResults[i].result[score]);
         }
 
-        $(`input[name='inf_custom_ResultPageURL'`).val('http://chainsquiz.com/quiz/results.html?n=' + queryStr);
+        // $(`input[name='inf_custom_ResultPageURL'`).val('http://chainsquiz.com/quiz/results.html?n=' + queryStr);
 
     }
 
