@@ -187,7 +187,6 @@ $(document).ready(function () {
         quizContainer.innerHTML = output.join("");
         //
 
-
         // Lead Form
         $('#zoho_CONTACT_EMAIL').on('change', function(){
             console.log("email changing")
@@ -221,21 +220,24 @@ $(document).ready(function () {
                 $("#zcampaignOptinForm").submit();
                 //window.open('http://chainsquiz.com/quiz/results.html?n=' + getResults(), '_blank');
                 // window.open("http://helenmacmillan.com/chains-quiz-thank-you/", '_blank');
+                $(".lead-gen").addClass('d-none');
+                $(".results-container").removeClass('d-none');
             }
             $(form).addClass('was-validated');
         });
+        
         //
         $('#lead-back-btn').on("click", function (e) {
             quizContainer.classList.remove('d-none');
             $('.lead-gen').addClass('d-none');
-            showPreviousSlide();
+            // showPreviousSlide();
         });
     }
 
 
     function showLeadGen() {
     
-        quizContainer.classList.add("d-none");
+        $(quizContainer).addClass("d-none");
         document.getElementsByClassName('lead-gen')[0].classList.remove('d-none');
         //
         const queryStr = getResults();

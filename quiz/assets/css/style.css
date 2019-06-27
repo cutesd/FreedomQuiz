@@ -87,15 +87,11 @@ li {
   z-index: -1;
 }
 
-.quiz-container, .lead-gen {
+.quiz-container, .lead-gen, .results-container {
   width: 75%;
   max-width: 850px;
   max-height: 500px;
   padding-bottom: 50px;
-}
-
-.results-container {
-  max-height: none;
 }
 
 .header {
@@ -303,10 +299,12 @@ li {
   font-size: 1.65rem;
 }
 
+/*==========  RESPONSIVE ================*/
+
 @media screen and (min-width: 993px) {}
 
 @media screen and (max-width: 992px) and (min-width: 769px) {
-  .quiz-container, .question, .description, .lead-gen {
+  .quiz-container, .question, .description, .lead-gen, .results-container {
     width: 85%;
   }
   .slider-desc {
@@ -324,7 +322,7 @@ li {
   .inline-bg {
     display: block;
   }
-  .quiz-container, .lead-gen {
+  .quiz-container, .lead-gen, .results-container {
     width: 100%;
     max-height: initial;
   }
@@ -392,7 +390,7 @@ li {
   .inline-bg {
     display: block;
   }
-  .quiz-container, .lead-gen {
+  .quiz-container, .lead-gen, .results-container {
     width: 100%;
     max-height: initial;
   }
